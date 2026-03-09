@@ -377,7 +377,7 @@ defmodule DemoWeb.Live.Home.Index do
     socket
     |> assign(:values, Journey.values(execution))
     |> assign(:all_values, Journey.values_all(execution))
-    |> assign(:execution_summary, Journey.Tools.summarize_as_text(execution.id))
+    |> assign(:execution_summary, Journey.Tools.introspect(execution.id))
     |> assign(:computation_states, get_computation_states(execution.id))
     |> assign(:execution_history, execution_history)
   end

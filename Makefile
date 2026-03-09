@@ -66,7 +66,9 @@ run-dev:
 
 
 test:
+	MIX_ENV=test mix ecto.drop -r Demo.Repo
 	MIX_ENV=test mix ecto.create -r Demo.Repo
+	MIX_ENV=test mix ecto.drop -r Journey.Repo
 	MIX_ENV=test mix ecto.create -r Journey.Repo
 	mix test --trace --warnings-as-errors --cover
 

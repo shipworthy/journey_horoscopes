@@ -81,7 +81,7 @@ defmodule Demo.HoroscopeGraph do
         ),
 
         # === Weekly Reminder Scheduling ===
-        schedule_recurring(
+        tick_recurring(
           :weekly_reminder_schedule,
           unblocked_when({
             :and,
@@ -109,9 +109,9 @@ defmodule Demo.HoroscopeGraph do
         ),
 
         # === Auto-archive after 2 weeks of inactivity ===
-        schedule_once(
+        tick_once(
           :schedule_archive,
-          [:last_updated_at],
+          [:horoscope],
           &schedule_archive_time/1
         ),
         archive(

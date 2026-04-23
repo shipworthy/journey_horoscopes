@@ -8,7 +8,7 @@ You can see this application running at https://horoscopes.gojourney.dev
 
 The application prompts the user for some inputs (name, birthday, pet preferences), validates the data (is the user's name "Bowser"?), computes the results as the data becomes available (zodiac sign, horoscope, "emailing" the horoscope to the user), and schedules recurring actions for the future (weekly horoscope "emails"). The session will also archive itself after two weeks of inactivity. The application also gives the user some UI toggles, to get some insights into what happens behind the scenes.  
 
-The application uses Journey to define its flow – inputs and computations, and their dependencies.
+The application uses Journey to define its flow – inputs and computations, and their dependencies. The graph is defined in [`./lib/demo/horoscope_graph.ex`](./lib/demo/horoscope_graph.ex).
 
 The application also uses Journey for creating and executing an instance of that flow – from the moment the user engages with the page, at which point the id of the execution becomes part of the URL. 
 

@@ -374,8 +374,10 @@ defmodule DemoWeb.Live.Home.Index do
   defp refresh_execution_state(socket, execution) do
     execution_history = Journey.history(execution.id) |> format_history()
 
+    merged_values = Map.merge(socket.assigns[:values] || %{}, Journey.values(execution))
+
     socket
-    |> assign(:values, Journey.values(execution))
+    |> assign(:values, merged_values)
     |> assign(:all_values, Journey.values_all(execution))
     |> assign(:execution_summary, Journey.Tools.introspect(execution.id))
     |> assign(:computation_states, get_computation_states(execution.id))

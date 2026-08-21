@@ -16,8 +16,8 @@ defmodule DemoWeb.Live.Home.Components.FlowAnalytics do
           <h4 class="font-semibold text-md mb-2">Journey Text Output</h4>
           <pre class={Classes.debug_pre()}><%= "iex> g = Demo.HoroscopeGraph.graph()\niex> Journey.Insights.FlowAnalytics.flow_analytics(g.name, g.version) |> Journey.Insights.FlowAnalytics.to_text()\n\n#{@flow_analytics_text}" %></pre>
         </div>
-        
-    <!-- Overview Stats -->
+
+        <!-- Overview Stats -->
         <div class="bg-gray-50 p-3 rounded">
           <h4 class="font-semibold text-md mb-2">
             Overview: {@flow_analytics.graph_name} ({@flow_analytics.graph_version})
@@ -75,8 +75,8 @@ defmodule DemoWeb.Live.Home.Components.FlowAnalytics do
             </div>
           </div>
         </div>
-        
-    <!-- Node Statistics Table -->
+
+        <!-- Node Statistics Table -->
         <table class="w-full text-sm">
           <thead>
             <tr class="border-b text-left">

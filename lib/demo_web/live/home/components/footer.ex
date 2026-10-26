@@ -1,7 +1,6 @@
 defmodule DemoWeb.Live.Home.Components.Footer do
   @moduledoc false
 
-  use Phoenix.Component
   use DemoWeb, :html
   import DemoWeb.Live.Classes
 
